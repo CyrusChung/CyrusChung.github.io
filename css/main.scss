@@ -18,8 +18,7 @@ $social-s: '../img/social-s.png';
 }
 
 body {
-	// overflow: auto;
-	
+	// overflow: auto;	
 	padding: 0;
 	margin: 0;
 }
@@ -135,8 +134,39 @@ header {
 	width: 95%;
 	margin: 0 auto;
 	padding: 1em;
+	padding-top: 3em;
 	& > * {
 		text-align: justify;
+	}
+
+	//for the about page content
+	.contact {
+		padding-bottom: 2em;
+		img {
+			width: 260px;
+			border-radius: 25px;
+		}
+		.mail {
+			color: #7d7d7d;
+			text-decoration: none;
+			font-weight: bold;
+			display: block;
+			min-width: 24px;
+			min-height: 24px;
+			background: url('../img/email-icon.png');
+			background-size: 24px 24px;
+			background-repeat: no-repeat;
+			padding-left: 30px;
+			&:hover {
+				color: $brand-color;
+			}
+		}
+	}
+
+	.description {
+		p {
+			padding-bottom: 1em;
+		}
 	}
 }
 
@@ -288,6 +318,17 @@ Responsive Design
 		margin-left: 30%;
 		max-height: 100vh;
 		// overflow: auto;
+
+			//for the about page content
+		.contact {
+			width: 30%;
+			float: right;
+		}
+
+		.description {
+			width: 65%;
+			float: left;
+		}
 	}
 
 	footer {
