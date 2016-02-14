@@ -3,13 +3,13 @@ footer .container #social a {
   min-height: 48px; }
 
 * {
+  font-family: "Microsoft YaHei", Arial, Sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   line-height: 1.5em; }
 
 body {
-  font-family: Sans-serif, Arial, "Microsoft YaHei";
   padding: 0;
   margin: 0; }
 
@@ -100,17 +100,17 @@ footer {
   footer .container #social a {
     display: inline-block; }
     footer .container #social a#Github {
-      background: url("../jpg/social-s.png") 0 0; }
+      background: url("../img/social-s.png") 0 0; }
       footer .container #social a#Github:hover {
-        background: url("../jpg/social-s.png") 0 48px; }
+        background: url("../img/social-s.png") 0 48px; }
     footer .container #social a#Wechat {
-      background: url("../jpg/social-s.png") -50px 0; }
+      background: url("../img/social-s.png") -50px 0; }
       footer .container #social a#Wechat:hover {
-        background: url("../jpg/social-s.png") -50px 48px; }
+        background: url("../img/social-s.png") -50px 48px; }
     footer .container #social a#Zhihu {
-      background: url("../jpg/social-s.png") -100px 0; }
+      background: url("../img/social-s.png") -100px 0; }
       footer .container #social a#Zhihu:hover {
-        background: url("../jpg/social-s.png") -100px 48px; }
+        background: url("../img/social-s.png") -100px 48px; }
   footer .container a:last-child {
     text-decoration: none;
     font-size: 0.7em;
@@ -123,7 +123,7 @@ footer {
   100% {
     color: #fff; } }
     footer .container a:last-child:hover {
-      animation: color-change 1s ease;
+      animation: color-change 0.5s ease;
       color: white; }
 
 /******************

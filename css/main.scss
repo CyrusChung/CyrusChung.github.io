@@ -6,10 +6,11 @@ $brand-color: #FD7C5D;
 	min-width: 48px;
 	min-height: 48px
 }
-$social-s: '../jpg/social-s.png';
+$social-s: '../img/social-s.png';
 
 //basic setting
 * {
+	font-family: "Microsoft YaHei", Arial, Sans-serif;
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
@@ -18,7 +19,7 @@ $social-s: '../jpg/social-s.png';
 
 body {
 	// overflow: auto;
-	font-family: Sans-serif, Arial, "Microsoft YaHei";
+	
 	padding: 0;
 	margin: 0;
 }
@@ -190,7 +191,7 @@ footer {
 			}
 
 			&:hover {
-				animation: color-change 1s ease;
+				animation: color-change 0.5s ease;
 				color: white;
 			}
 		}
