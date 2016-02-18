@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	{% include head.html %}
+
+	<body>
+		<div id="wrap">
+
+			<header>
+				<div id="profile">
+					<img src="/assets/img/profile.jpg">
+					<section>
+						<h1>Cyrus Zhong</h1>
+						<p>A guy interested in many things.</p>
+					</section>
+				</div>
+				<nav>
+					<div id="menu-btn">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<ul id="menu-content">
+						<li><a class="visiting" href="/">HOME</a></li>
+						<li><a href=""><del>PLANNING</del></a></li>
+						<li><a href=""><del>TECH</del></a></li>
+						<li><a href="/post-list">ARCHIVE</a></li>
+						<li><a href="/about">ABOUT</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<div id="main-content">
+
+				{{ content }}
+
+			</div>
+		</div>
+
+		{% include footer.html %}
+
+		<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
+		<script src="/assets/js/main.js"></script>
+		
+	</body>
+
+</html>

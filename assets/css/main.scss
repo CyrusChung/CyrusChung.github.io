@@ -1,0 +1,436 @@
+$white: #fafafa;
+$black: #232323;
+$brand-color: #FD7C5D;
+
+%social {
+	min-width: 48px;
+	min-height: 48px
+}
+$social-s: '../img/social-s.png';
+
+%anchor {
+	padding: 5px;
+	padding-left: 0;
+	text-decoration: none;
+	color: lighten($brand-color, 10%);
+
+	&:visited {
+		color: lighten($brand-color, 10%);
+	}
+
+	&:hover {
+		color: $brand-color;
+	}
+}
+//basic setting
+* {
+	font-family: "Microsoft YaHei", Arial, Sans-serif;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	line-height: 1.5em;
+}
+
+body {
+	// overflow: auto;	
+	padding: 0;
+	margin: 0;
+}
+
+
+/*
+Mobile First Appoach CSS
+*/
+
+//set main height and minus space for footer
+#wrap {
+	min-height: calc(100vh - 134px);
+}
+
+//profile and nav
+header {
+	width: 100%;
+	text-align: center;
+	background-color: $black;
+
+	//profile pic
+	img {
+		margin-top: 5px;
+		width: 100px;
+		border: 4px solid $white;
+		border-radius: 50%;
+	}
+	//profile content
+	section {
+		color: $white;
+		padding: 5px 0px;
+		p {
+			margin-top: 5px;
+		}
+		h1 {
+			margin: 0px;
+		}
+	}
+
+	//nav menu
+	nav {
+		width: 100%;
+		//setting the nav btn
+		#menu-btn {
+			display: block;
+			position: absolute;
+			right: 10px;
+			top: 5px;
+			width: 32px;
+			height: 32px;
+			border: 2px solid $white;
+			border-radius: 10px;
+			z-index: 99;
+
+			span {
+				display: block;
+				margin: 5px auto 0;
+				width: 80%;
+				height: 2px;
+				background-color: $white;
+			}
+		}
+
+		//setting the nav content
+		#menu-content {
+			padding-left: 0px;
+			list-style: none;
+			display: none;
+			li {
+				padding: 10px;
+				a {
+					padding: 10px;
+					text-decoration: none;
+					color: white;
+					width: 100%;
+
+					&:visited {
+						color: #7d7d7d;
+					}
+
+					&:hover {
+						color: $brand-color;
+						border-bottom: 2px dotted $brand-color;
+					}
+
+					&.visiting {
+						color: $brand-color;
+						border-bottom: 2px solid $brand-color;
+					}
+				}
+			}
+		}
+
+		//expand after btn is click
+		.expand {
+			min-height: 100vh;
+			box-sizing: border-box;
+			display: block !important;
+			position: absolute;
+			top: 0px;
+			margin: 0;
+			width: 100%;
+			height: 249px;
+			padding-top: 45px;
+			background-color: $black;
+			z-index: 90;
+		}
+	}
+}
+
+//main content area
+#main-content {
+	width: 95%;
+	margin: 0 auto;
+	padding-top: 1.5em;
+
+	//for home page
+	h1 {
+		color: lighten($black, 20%);
+		margin-bottom: 1em;
+	}
+	h2 {
+		font-size: 1.5em;
+		display: inline-block;
+		margin-bottom: 0.5em;
+		text-transform: capitalize;
+
+		a.post-link {
+			@extend %anchor;
+		}
+	}
+
+	span.post-meta {
+		font-size: 0.9em;
+		display: inline;
+		padding-left: 10px;
+		color: lighten($black, 40%)
+	}
+
+	p {
+		padding-bottom: 0.8em;
+
+		a{
+			@extend %anchor;
+			padding: 0;
+		}
+	}
+
+	//for the post-list
+	ul.post-list {
+		list-style: none;
+
+		li {
+			margin-bottom: 1em;
+
+			span#readmore {
+				display: block;
+				text-align: right;
+				padding-top: 10px;
+			}
+			a {
+				@extend %anchor;
+			}
+		}
+	}
+
+
+	//for the about page content
+	.contact {
+		padding-bottom: 2em;
+		img {
+			width: 260px;
+			border-radius: 25px;
+			display: block;
+		}
+		.mail {
+			color: #7d7d7d;
+			text-decoration: none;
+			font-weight: bold;
+			display: block;
+			min-width: 24px;
+			min-height: 24px;
+			background: url('../img/email-icon.png');
+			background-size: 24px 24px;
+			background-repeat: no-repeat;
+			padding-left: 30px;
+			&:hover {
+				color: $brand-color;
+			}
+		}
+	}
+
+	.description {
+		p {
+			padding-bottom: 1em;
+		}
+	}
+}
+
+// css for footer
+footer {
+	background-color: $black;
+	text-align: center;
+	padding: 1em 0;
+	color: white;
+
+	//social icon
+	.container {
+		#social {
+			a {
+				@extend %social;
+				display: inline-block;
+
+				&#Github {
+					background: url($social-s) 0 0;
+					&:hover {
+						background: url($social-s) 0 48px;
+					}
+				}
+
+				&#Wechat {
+					background: url($social-s) -50px 0;
+					&:hover {
+						background: url($social-s) -50px 48px;
+					}
+				}
+
+				&#Zhihu {
+					background: url($social-s) -100px 0;
+					&:hover {
+						background: url($social-s) -100px 48px;
+					}
+				}
+			}
+		}
+
+
+	//github text
+		a:last-child {
+			text-decoration: none;
+			font-size: 0.7em;
+			color: #7d7d7d;
+
+			@keyframes color-change {
+				0% {color: #7d7d7d;}
+				50% {color: #BEBEBE;}
+				100% {color: #fff;}
+			}
+
+			&:hover {
+				animation: color-change 0.5s ease;
+				color: white;
+			}
+		}
+	}
+}
+
+/******************
+Responsive Design
+*******************/
+
+//for ipad
+@media only screen and (min-width: 760px) {
+	//display nav and float profile and nav
+	header {
+		display: block;
+		#profile {
+			width: 80%;
+			margin: 0 auto;
+			display: block;
+
+			img {
+				margin: 10px;
+			}
+			& > * {
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+
+		nav {
+			#menu-content {
+				display: block;
+				width: 80%;
+				margin: 0 auto;
+				li {
+					display: inline-block;
+					margin: 0 auto;
+				}
+			}
+
+			#menu-btn {
+				display: none;
+			}
+		}
+	}
+
+
+	//content area
+	#main-content {
+		width: 80%;
+
+		ul.post-list {
+			li {
+				padding: 10px;
+				border-left: 5px solid lighten($black, 50%);
+
+				&:hover {
+					box-shadow: 2px 2px 3px lighten($black, 50%);
+					border-left: 5px solid lighten($brand-color, 10%)
+				}
+			}
+		}
+
+		//for the about page content
+		.contact {
+			padding-bottom: 2em;
+			img {
+				width: 260px;
+				border-radius: 25px;
+				display: block;
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+
+//for desktop and landscape mode
+@media only screen and (min-width: 1023px) {
+	#wrap {
+		min-height: 100vh;
+	}
+
+	header {
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 30%;
+		float: left;
+		min-height: 100vh;
+		#profile {
+			width: 60%;
+			margin-top: 10%;
+			margin-right: 10px;
+			img {
+				margin: 10px auto;
+			}
+			& > * {
+				margin: 0 auto;
+				display: block;
+			}
+		}
+
+		nav {
+			margin: 0 auto;
+			width: 60%;
+			margin-top: 10%;
+			margin-right: 10px;
+			#menu-content {
+				li {
+					display: block;
+				}
+			}
+		}
+	}
+
+	#main-content {
+		width: 60%;
+		margin-left: 31%;
+		max-height: 100vh;
+		padding: 1em;
+
+		//for the about page content
+		.contact {
+			width: 30%;
+			float: right;
+			padding-top: 20px;
+		}
+
+		.description {
+			width: 65%;
+			float: left;
+			padding-top: 20px;
+		}
+	}
+
+	footer {
+		position: fixed;
+		bottom: 0;
+		left:0;
+		width: 30%;
+		.container {
+			width: 60%;
+			margin: 0 auto;
+			margin-right: 10px;
+		}
+	}
+}
+
+
+@import 'syntax-highlight'
