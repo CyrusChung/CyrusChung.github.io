@@ -13,6 +13,7 @@ $social-s: '../img/social-s.png';
 	padding-left: 0;
 	text-decoration: none;
 	color: lighten($brand-color, 10%);
+	cursor: pointer;
 
 	&:visited {
 		color: lighten($brand-color, 10%);
@@ -147,7 +148,7 @@ header {
 #main-content {
 	width: 95%;
 	margin: 0 auto;
-	padding-top: 1.5em;
+	padding: 1.5em 0;
 
 	//for home page
 	h1 {
@@ -163,8 +164,19 @@ header {
 		a.post-link {
 			@extend %anchor;
 		}
+
+		&#inpost {
+			color: $brand-color;
+			margin-top: 10px;
+		}
 	}
 
+	ul {
+		li {
+			margin-left: 1.5em;
+			margin-bottom: 0.5em;
+		}
+	}
 	span.post-meta {
 		font-size: 0.9em;
 		display: inline;
@@ -179,6 +191,12 @@ header {
 			@extend %anchor;
 			padding: 0;
 		}
+	}
+
+	#back {
+		@extend %anchor;
+		text-decoration: underline;
+		margin-top: 1em;
 	}
 
 	//for the post-list
@@ -362,6 +380,10 @@ Responsive Design
 
 //for desktop and landscape mode
 @media only screen and (min-width: 1023px) {
+	body {
+		min-height: 660px;
+	}
+
 	#wrap {
 		min-height: 100vh;
 	}
@@ -389,7 +411,7 @@ Responsive Design
 		nav {
 			margin: 0 auto;
 			width: 60%;
-			margin-top: 10%;
+			margin-top: 2%;
 			margin-right: 10px;
 			#menu-content {
 				li {
@@ -402,8 +424,12 @@ Responsive Design
 	#main-content {
 		width: 60%;
 		margin-left: 31%;
-		max-height: 100vh;
+		min-height: 100vh;
 		padding: 1em;
+
+		h2#inpost {
+			margin-top: 40px;
+		}
 
 		//for the about page content
 		.contact {

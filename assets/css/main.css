@@ -2,14 +2,15 @@ footer .container #social a {
   min-width: 48px;
   min-height: 48px; }
 
-#main-content h2 a.post-link, #main-content p a, #main-content ul.post-list li a {
+#main-content h2 a.post-link, #main-content p a, #main-content #back, #main-content ul.post-list li a {
   padding: 5px;
   padding-left: 0;
   text-decoration: none;
-  color: #fea58f; }
-  #main-content h2 a.post-link:visited, #main-content p a:visited, #main-content ul.post-list li a:visited {
+  color: #fea58f;
+  cursor: pointer; }
+  #main-content h2 a.post-link:visited, #main-content p a:visited, #main-content #back:visited, #main-content ul.post-list li a:visited {
     color: #fea58f; }
-  #main-content h2 a.post-link:hover, #main-content p a:hover, #main-content ul.post-list li a:hover {
+  #main-content h2 a.post-link:hover, #main-content p a:hover, #main-content #back:hover, #main-content ul.post-list li a:hover {
     color: #FD7C5D; }
 
 * {
@@ -98,7 +99,7 @@ header {
 #main-content {
   width: 95%;
   margin: 0 auto;
-  padding-top: 1.5em; }
+  padding: 1.5em 0; }
   #main-content h1 {
     color: #565656;
     margin-bottom: 1em; }
@@ -107,6 +108,12 @@ header {
     display: inline-block;
     margin-bottom: 0.5em;
     text-transform: capitalize; }
+    #main-content h2#inpost {
+      color: #FD7C5D;
+      margin-top: 10px; }
+  #main-content ul li {
+    margin-left: 1.5em;
+    margin-bottom: 0.5em; }
   #main-content span.post-meta {
     font-size: 0.9em;
     display: inline;
@@ -116,6 +123,9 @@ header {
     padding-bottom: 0.8em; }
     #main-content p a {
       padding: 0; }
+  #main-content #back {
+    text-decoration: underline;
+    margin-top: 1em; }
   #main-content ul.post-list {
     list-style: none; }
     #main-content ul.post-list li {
@@ -221,6 +231,9 @@ Responsive Design
         display: block;
         margin-bottom: 10px; } }
 @media only screen and (min-width: 1023px) {
+  body {
+    min-height: 660px; }
+
   #wrap {
     min-height: 100vh; }
 
@@ -243,7 +256,7 @@ Responsive Design
     header nav {
       margin: 0 auto;
       width: 60%;
-      margin-top: 10%;
+      margin-top: 2%;
       margin-right: 10px; }
       header nav #menu-content li {
         display: block; }
@@ -251,8 +264,10 @@ Responsive Design
   #main-content {
     width: 60%;
     margin-left: 31%;
-    max-height: 100vh;
+    min-height: 100vh;
     padding: 1em; }
+    #main-content h2#inpost {
+      margin-top: 40px; }
     #main-content .contact {
       width: 30%;
       float: right;
@@ -425,9 +440,10 @@ Responsive Design
 
 #lightbox img {
   position: relative;
-  top: calc(50% - 250px);
+  top: 10%;
   box-shadow: 0 0 25px #111;
-  max-width: 500px;
+  max-width: 80%;
+  max-height: 80%;
   border: 5px solid white;
   border-radius: 10px; }
 

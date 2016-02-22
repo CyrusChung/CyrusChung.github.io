@@ -20,9 +20,9 @@
 						<span></span>
 					</div>
 					<ul id="menu-content">
-						<li><a href="/index.html">HOME</a></li>
-						<li><a href=""><del>PLANNING</del></a></li>
-						<li><a href=""><del>TECH</del></a></li>
+						<li><a href="/">HOME</a></li>
+						<li><a href="/planning">PLANNING</a></li>
+						<li><a href="/tech">TECH</a></li>
 						<li><a class="visiting" href="/post-list">ARCHIVE</a></li>
 						<li><a href="/about">ABOUT</a></li>
 					</ul>
@@ -30,9 +30,10 @@
 			</header>
 
 			<div id="main-content">
-
+				<h2 id="inpost">{{ page.title }}</h2>
+			    <span class="post-meta">{{ page.date | date: "%b %-d, %Y" }}</span>
 				{{ content }}
-
+				<a id="back" onclick="window.history.back()">Back</a>
 			</div>
 		</div>
 

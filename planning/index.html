@@ -1,11 +1,11 @@
 ---
-layout: post-list
+layout: planning
 ---
 
 <h1 class="page-heading">Posts List</h1>
 
 <ul class="post-list">
-{% for post in site.posts %}
+{% for post in site.categories.planning %}
   <li>
     <h2>
       <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>

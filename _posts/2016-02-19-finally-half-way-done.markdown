@@ -2,6 +2,7 @@
 layout: archive
 title:  "Finally, half-way done!"
 date:   2016-02-19 02:57:39 +0800
+categories: tech
 ---
 Finally my first blog site is published!
 
